@@ -1,12 +1,8 @@
 {
+  pkgs,
   ...
 }:
 {
-  home.file.".config/alacritty" = {
-    source = ./configs/alacritty;
-    recursive = true;
-  };
-
   programs = {
     fish = {
       enable = true;
@@ -18,7 +14,22 @@
     alacritty = {
       enable = true;
       settings = {
-        general.import = "$XDG_CONFIG_HOME/alacritty/themes/noctalia.toml";
+        general.import = [ "~/.config/alacritty/themes/noctalia.toml" ];
+
+        window = {
+          opacity = 0.9;
+          padding.x = 20;
+          padding.y = 20;
+          dynamic_padding = true;
+        };
+      };
+    };
+
+    helix = {
+      enable = true;
+      package = pkgs.helix;
+      settings = {
+        theme = "noctalia";
       };
     };
 
