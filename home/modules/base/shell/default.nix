@@ -3,10 +3,10 @@
 }:
 {
   home.file.".config/alacritty" = {
-      source = ./configs/alacritty;
-      recursive = true;
+    source = ./configs/alacritty;
+    recursive = true;
   };
-  
+
   programs = {
     fish = {
       enable = true;
@@ -17,6 +17,9 @@
 
     alacritty = {
       enable = true;
+      settings = {
+        general.import = "$XDG_CONFIG_HOME/alacritty/themes/noctalia.toml";
+      };
     };
 
     eza = {
@@ -33,6 +36,9 @@
     zellij = {
       enable = true;
       enableFishIntegration = true;
+      settings = {
+        theme = "noctalia";
+      };
     };
 
   };
