@@ -38,6 +38,9 @@
     zellij = {
       enable = true;
       enableFishIntegration = true;
+      settings = {
+        theme = "noctalia";
+      };
     };
 
   };
