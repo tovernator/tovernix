@@ -45,6 +45,8 @@
       system = "x86_64-linux";
       hostname = "toverpc";
       stateVersion = "26.05";
+      gitUser = "";
+      gitEmail = "";
     in
     {
       nixosConfigurations = {
@@ -55,6 +57,8 @@
 
           specialArgs = {
             hostname = hostname;
+            gitUser = gitUser;
+            gitEmail = gitEmail;
             stateVersion = stateVersion;
           };
 
@@ -71,6 +75,8 @@
                 inherit inputs;
                 hostname = hostname;
                 stateVersion = stateVersion;
+                gitUser = gitUser;
+                gitEmail = gitEmail;
               };
               home-manager.users.cutie = ./home/users/cutie.nix;
 

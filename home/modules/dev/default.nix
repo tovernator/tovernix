@@ -1,7 +1,19 @@
 {
+  gitUser,
+  gitEmail,
   ...
 }:
 {
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name = gitUser;
+        email = gitEmail;
+      };
+      init.defaultBranch = "main";
+      merge.ourts.driver = true;
+    };
+  };
   programs.lazygit.enable = true;
 }
