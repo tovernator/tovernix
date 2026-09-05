@@ -1,11 +1,14 @@
 {
   description = "base install";
+
   inputs = {
 
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-26.05";
     };
+
     plover-flake.url = "github:openstenoproject/plover-flake";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +28,6 @@
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs =
@@ -43,12 +45,14 @@
       system = "x86_64-linux";
       hostname = "toverpc";
       stateVersion = "26.05";
-      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
       nixosConfigurations = {
+
         base = nixpkgs.lib.nixosSystem {
+
           inherit system;
+
           specialArgs = {
             hostname = hostname;
             stateVersion = stateVersion;
@@ -59,33 +63,24 @@
             ./hardware/hardware-configuration.nix
             niri.nixosModules.niri
             noctalia-greeter.nixosModules.default
+
             home-manager.nixosModules.home-manager
             {
+
               home-manager.extraSpecialArgs = {
                 inherit inputs;
                 hostname = hostname;
                 stateVersion = stateVersion;
               };
               home-manager.users.cutie = ./home/users/cutie.nix;
+
               home-manager.sharedModules = [
                 noctalia.homeModules.default
-
               ];
             }
           ];
         };
       };
 
-      # homeConfigurations = {
-      #   cutie = home-manager.lib.homeManagerConfiguration {
-      #     inherit pkgs;
-      #     extraSpecialArgs = {inherit inputs;};
-      #     modules = [
-      #       ./home
-      #       niri.homeModules.niri
-      #       noctalia.homeModules.default
-      #     ];
-      #   };
-      # };
     };
 }

@@ -5,6 +5,7 @@
   time.timeZone = "Europe/Amsterdam";
   i18n.inputMethod.fcitx5.waylandFrontend = true;
   i18n.defaultLocale = "en_US.UTF-8";
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "nl_NL.UTF-8";
     LC_IDENTIFICATION = "nl_NL.UTF-8";

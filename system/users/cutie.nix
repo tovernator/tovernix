@@ -7,6 +7,7 @@
     isNormalUser = true;
     description = "default user";
     initialPassword = "cutie";
+
     extraGroups = [
       "networkmanager"
       "wheel"
