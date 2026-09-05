@@ -5,7 +5,7 @@
   programs.noctalia.settings.shell = {
     setup_wizard_enabled = false;
     niri_overview_type_to_launch_enabled = true;
-    greeter_sync.autosync = true;
+    greeter_sync.auto_sync = true;
     polkit_agent = true;
     session.grid = true;
     launcher.app_grid = true;
