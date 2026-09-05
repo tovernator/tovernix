@@ -14,6 +14,7 @@
     layer = "top";
     padding = 16;
     thickness = 32;
+    widget_spacing = 5;
   };
 
   programs.noctalia.settings.bar.main = {
@@ -43,17 +44,29 @@
     layer = "top";
     reserve_space = false;
     margin_ends = 400;
-
     padding = 16;
     thickness = 32;
+    widget_spacing = 5;
   };
+
+  programs.noctalia.settings.bar.sub.capsule_group = [
+    {
+      id = "wp";
+      members = [ "wallpaper" "wallhaven" ];
+      fill = "surface_variant";
+      padding = 6.0;
+      widget_spacing = 5;
+      accordion = true;
+      accordion_direction = "end";
+    }
+  ];
 
   programs.noctalia.settings.bar.sub = {
     start = [ "procmon" "displays" ];
     center = [ ];
     end = [
-      "wallpaper"
-      "wallhaven"
+      "group:wp"
+      
     ];
   };
 
