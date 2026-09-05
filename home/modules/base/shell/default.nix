@@ -33,6 +33,14 @@
       };
     };
 
+    bat = {
+      enable = true;
+      config.theme = "noctalia";
+      themes = {
+        file = "noctalia.tmTheme";
+      };
+    };
+
     eza = {
       enable = true;
       enableFishIntegration = true;
