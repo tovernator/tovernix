@@ -4,6 +4,7 @@
     ../modules/social
     ../modules/steno
     ../modules/dev
+    ../modules/firefox
   ];
 
   home.username = "cutie";

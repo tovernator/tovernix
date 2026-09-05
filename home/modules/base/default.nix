@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs,lib, ... }: {
 
   imports = [
     ./creds
@@ -17,7 +17,15 @@
     automount = true;
   };
 
-  programs.zed-editor.enable = true;
-  programs.firefox.enable = true;
-
+  programs.zed-editor = {
+    enable = true;
+    extensions = [ "nix" "toml" "rust" ];
+    userSettings = {
+      theme = {
+        mode = "system";
+        dark = "Noctalia Dark Transparent";
+        light = "Noctalia Light Transparent";
+      };
+    };
+  };
 }
