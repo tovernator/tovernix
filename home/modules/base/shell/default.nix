@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 {
@@ -21,6 +22,14 @@
           padding.y = 20;
           dynamic_padding = true;
         };
+      };
+    };
+
+    helix = {
+      enable = true;
+      package = pkgs.helix;
+      settings = {
+        theme = "noctalia";
       };
     };
 
