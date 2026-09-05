@@ -2,10 +2,6 @@
   ...
 }:
 {
-  home.file.".config/alacritty" = {
-      source = ./configs/alacritty;
-      recursive = true;
-  };
   
   programs = {
     fish = {
