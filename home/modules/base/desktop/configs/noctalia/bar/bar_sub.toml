@@ -1,0 +1,21 @@
+[bar.sub]
+start = []
+center = []
+end = [ "wallpaper", "wallhaven"]
+
+enabled = true
+position = "bottom"
+smart_auto_hide = true
+layer = "top"
+reserve_space = false
+monitor = ""
+
+margin_ends = 600
+margin_edge = 0
+padding = 16
+thickness = 32
+
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
