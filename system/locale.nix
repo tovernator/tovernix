@@ -1,10 +1,26 @@
 {
+  pkgs,
   ...
 }:
 {
   time.timeZone = "Europe/Amsterdam";
-  i18n.inputMethod.fcitx5.waylandFrontend = true;
+
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.waylandFrontend = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+    ];
+  };
+  
   i18n.defaultLocale = "en_US.UTF-8";
+
+  services.xserver = {
+    xkb.layout = "us";
+    xkbVariant = "workman,";
+    xkbOptions = "grp:win_space_toggle";
+  };
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "nl_NL.UTF-8";
