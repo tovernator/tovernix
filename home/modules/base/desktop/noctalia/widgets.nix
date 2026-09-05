@@ -19,6 +19,10 @@
       show_label = false;
     };
 
+    tray = {
+      drawer = true;
+    };
+
     battery = {
       show_label = false;
     };
@@ -32,7 +36,7 @@
     };
 
     displays = {
-      type = "raycursive/niri-displays:widget";
+      type = "raycursive/niri-displays:bar";
     };
 
   };

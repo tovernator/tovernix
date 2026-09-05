@@ -16,6 +16,11 @@
 
     noctalia-greeter = {
       enable = true;
+      passwordless-sync-users = [ "cutie" ];
+      settings = {
+        scheme = "Synced";
+        hide_logo = true; 
+      };
     };
   };
 
