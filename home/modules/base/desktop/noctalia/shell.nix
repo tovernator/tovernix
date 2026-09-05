@@ -1,0 +1,23 @@
+{
+  ...
+}:
+{
+  programs.noctalia.settings.shell = {
+    enable_setup_wizard = false;
+    niri_overview_type_to_launch_enabled = true;
+    polkit_agent = true;
+    session.grid = true;
+    launcher.app_grid = true;
+    panel = {
+      clipboard_position = "auto";
+      control_center_placement = "floating";
+      launcher_placement = "floating";
+      launcher_position = "auto";
+      open_near_click_clipboard = true;
+      open_near_click_control_center = true;
+      open_near_click_wallpaper = true;
+      polkit_position = "auto";
+      wallpaper_placement = "floating";
+    };
+  };
+}
