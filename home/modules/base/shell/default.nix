@@ -49,6 +49,7 @@
       enableFishIntegration = true;
       settings = {
         theme = "noctalia";
+        show_startup_tips = false;
       };
     };
 
