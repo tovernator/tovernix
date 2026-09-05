@@ -27,5 +27,13 @@
       glyph = "cat";
     };
 
+    procmon = {
+      type = "weinguyen/procmon:widget";
+    };
+
+    displays = {
+      type = "raycursive/niri-displays:widget";
+    };
+
   };
 }

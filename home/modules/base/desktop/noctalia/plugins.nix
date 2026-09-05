@@ -22,6 +22,8 @@
     enabled = [
       "noctalia/wallhaven"
       "kenn/keybind-cheatsheet"
+      "weinguyen/procmon"
+      "raycursive/niri-diplays"
     ];
   };
 

@@ -2,6 +2,11 @@
   ...
 }:
 {
+  programs.noctalia.settings.bar.order = [
+    "main"
+    "sub"
+  ];
+
   programs.noctalia.settings.bar.main = {
     enabled = true;
     position = "top";
@@ -11,11 +16,6 @@
     thickness = 32;
   };
 
-  programs.noctalia.settings.bar.order = [
-    "main"
-    "sub"
-  ];
-
   programs.noctalia.settings.bar.main = {
     start = [
       "launcher"
@@ -23,14 +23,14 @@
       "keybinds"
       "workspaces"
     ];
-    center = [ ];
+    center = [ "clock" ];
     end = [
       "tray"
       "notifications"
       "clipboard"
       "bluetooth"
       "network"
-      "sound"
+      "volume"
       "battery"
       "session"
     ];
@@ -42,13 +42,14 @@
     smart_auto_hide = true;
     layer = "top";
     reserve_space = false;
+    margin_ends = 400;
 
     padding = 16;
     thickness = 32;
   };
 
   programs.noctalia.settings.bar.sub = {
-    start = [ ];
+    start = [ "procmon" "displays" ];
     center = [ ];
     end = [
       "wallpaper"
