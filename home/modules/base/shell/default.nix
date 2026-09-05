@@ -17,6 +17,15 @@
 
     alacritty = {
       enable = true;
+      settings = {
+        general.import = ["~/.config/alacritty/themes/noctalia.toml"];
+        window = {
+          opacity = 0.9;
+          padding.x = 20;
+          padding.y = 20;
+          dynamic_padding = true;
+        };
+      };
     };
 
     eza = {
