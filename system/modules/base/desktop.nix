@@ -21,6 +21,9 @@
 
   services = {
     greetd.enable = true;
+    upower.enable = true;
+    udisks2.enable = true;
+    tuned.enable = true;
   };
 
   fonts = {
