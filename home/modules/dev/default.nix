@@ -12,7 +12,7 @@
         email = gitEmail;
       };
       init.defaultBranch = "main";
-      merge.ourts.driver = true;
+      merge.ours.driver = true;
     };
   };
   programs.lazygit.enable = true;
