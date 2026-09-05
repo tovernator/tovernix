@@ -33,6 +33,14 @@
       };
     };
 
+    bat = {
+      enable = true;
+      config.theme = "noctalia";
+      themes = {
+        file = "noctalia.tmTheme";
+      };
+    };
+
     eza = {
       enable = true;
       enableFishIntegration = true;
@@ -49,6 +57,7 @@
       enableFishIntegration = true;
       settings = {
         theme = "noctalia";
+        show_startup_tips = false;
       };
     };
 
